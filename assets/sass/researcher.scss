@@ -164,11 +164,15 @@ $y-medium: 1.0rem;
     }
 }
 #footer {
+    margin-top: 4em;
     a {
         @extend %link-dark;
     }
 }
 
+.my-fa-icon {
+	font-size: small;
+}
 
 @media only screen and (max-width: $avatar-size*2) {
   .avatar {

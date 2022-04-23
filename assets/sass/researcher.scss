@@ -58,6 +58,9 @@ $y-medium: 1.0rem;
 .nav-link {
     @extend %link-default;
 }
+.nav-separator {
+	color: #aaaaaa;
+}
 #content {
     a {
         @extend %link-default;
@@ -80,12 +83,16 @@ $y-medium: 1.0rem;
         margin: $y-medium auto;
         max-width: 100%;
     }
-    .avatar > img {
-        border-radius: 50%;
+    .avatar  {
         float: right;
         margin: -8px 0 0 16px;
-        height: $avatar-size;
-        width: $avatar-size;
+	img {
+		padding: 5px;
+		border-radius: 50%;
+		height: $avatar-size;
+		width: $avatar-size;
+		border: 1px  solid #c4c4c4;
+	}
     }
     ol {
         counter-reset: list;
@@ -157,4 +164,16 @@ $y-medium: 1.0rem;
     a {
         @extend %link-dark;
     }
+}
+
+
+@media only screen and (max-width: $avatar-size*2) {
+  .avatar {
+	display: none;
+  }
+}
+@media only screen and (max-width: $avatar-size*4) and (min-width: $avatar-size*2) {
+  #content .avatar {
+	float: none;
+  }
 }

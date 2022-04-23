@@ -46,7 +46,7 @@ $y-medium: 1.0rem;
 * {
     color: $black;
     font-family: $font-family;
-    line-height: 1.2;
+    line-height: 1.25;
 }
 .container {
     max-width: $max-width;
@@ -60,6 +60,9 @@ $y-medium: 1.0rem;
 }
 .nav-separator {
 	color: #aaaaaa;
+}
+.navbar-title {
+	font-size: 1.9rem;
 }
 #content {
     a {
@@ -75,7 +78,7 @@ $y-medium: 1.0rem;
     }
     @for $i from 1 through 4 {
         h#{$i} {
-            font-size: 1.2rem + 0.2 * (4 - $i);
+            font-size: 1.1rem + 0.2 * (4 - $i);
         }
     }
     img {

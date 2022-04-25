@@ -1,6 +1,19 @@
 {{ define "main" }}
 <div class="container">
 	<!-- TODO: show title, authors, ... -->
+    <h2>
+	    {{ .Title }}
+		    {{ with .Params.pdf }}
+		    <a href="{{ . }}"><i class="fa-regular fa-file-pdf"></i></a>
+		    {{ end }}
+		    {{ with .Params.doi }}
+		    <a href="{{ . }}"><i class="fa-regular fa-link"></i></a>
+		    {{ end }}
+    </h2>
+    <p>
+    {{ .Params.authors }}
+    </p>
+
     {{ .Content }}
 </div>
 {{ end }}

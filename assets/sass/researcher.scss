@@ -174,6 +174,16 @@ $y-medium: 1.0rem;
 	font-size: small;
 }
 
+ul.publications {
+	li {
+		padding-bottom: 0.5em;
+	}
+
+	span.paper-info {
+		font-style: italic;
+	}
+}
+
 @media only screen and (max-width: $avatar-size*2) {
   .avatar {
 	display: none;

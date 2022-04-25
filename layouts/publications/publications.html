@@ -7,14 +7,15 @@
         {{ range (.Pages.ByParam "year").Reverse }}
             <li>
 		    {{ .Params.authors }}<br/>
-		    {{ with .Params.pdf }}
-		    <a href="{{ . }}"><i class="fa-regular fa-file-pdf"></i></a>
-		    {{ end }}
-		    {{ with .Params.doi }}
-		    <a href="{{ . }}"><i class="fa-regular fa-link"></i></a>
-		    {{ end }}
 		    <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
 		    <span class="paper-info">{{ .Params.info }}</span>
+		    &nbsp;
+		    {{ with .Params.pdf }}
+		    <a style="color: #ff0000;" href="{{ . }}">[pdf]</i></a>
+		    {{ end }}
+		    {{ with .Params.doi }}
+		    <a href="{{ . }}">[doi]</i></i></a>
+		    {{ end }}
 	    </li>
         {{ end }}
     </ul>

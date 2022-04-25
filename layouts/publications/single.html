@@ -3,16 +3,19 @@
 	<!-- TODO: show title, authors, ... -->
     <h2>
 	    {{ .Title }}
-		    {{ with .Params.pdf }}
-		    <a href="{{ . }}"><i class="fa-regular fa-file-pdf"></i></a>
-		    {{ end }}
-		    {{ with .Params.doi }}
-		    <a href="{{ . }}"><i class="fa-regular fa-link"></i></a>
-		    {{ end }}
     </h2>
     <p>
     {{ .Params.authors }}
     </p>
+
+    <p>
+		    {{ with .Params.pdf }}
+		    <a style="color: #ff0000;" href="{{ . }}">[pdf]</i></a>
+		    {{ end }}
+		    {{ with .Params.doi }}
+		    <a href="{{ . }}">[doi]</i></i></a>
+		    {{ end }}
+		</p>
 
     {{ .Content }}
 </div>

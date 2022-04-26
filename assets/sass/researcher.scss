@@ -64,10 +64,10 @@ $y-medium: 1.0rem;
 .navbar-title {
 	font-size: 1.9rem;
 }
+a {
+	@extend %link-default;
+}
 #content {
-    a {
-        @extend %link-default;
-    }
     p {
         margin-bottom: $y-small;
     }
@@ -184,7 +184,11 @@ ul.publications {
 	}
 
 	span.paper-info {
-		font-style: italic;
+		color: #777;
+	}
+
+	a.paper-links {
+		color: #000;
 	}
 }
 

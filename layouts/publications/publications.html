@@ -10,12 +10,12 @@
 		    <span class="paper-title">{{ .Title }}</span><br/>
 		    <span class="paper-info">{{ .Params.info }}</span>
 		    <br/>
-		    <a href="{{ .Permalink }}">[abstract]</a>
+		    <a class="paper-links" href="{{ .Permalink }}">[abstract]</a>
 		    {{ with .Params.pdf }}
-		    <a style="color: #ff0000;" href="{{ . }}">[pdf]</a>
+		    <a class="paper-links" style="color: #ff0000;" href="{{ . }}">[pdf]</a>
 		    {{ end }}
 		    {{ with .Params.doi }}
-		    <a href="{{ . }}">[doi]</a>
+		    <a class="paper-links" href="{{ . }}">[doi]</a>
 		    {{ end }}
 	    </li>
         {{ end }}

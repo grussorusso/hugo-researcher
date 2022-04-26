@@ -5,16 +5,17 @@
     <h3>{{ .Key }}</h3>
     <ul class="publications">
         {{ range (.Pages.ByParam "year").Reverse }}
-            <li>
+	<li id="{{ .Title | urlize }}">
 		    {{ .Params.authors }}<br/>
-		    <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
+		    <span class="paper-title">{{ .Title }}</span><br/>
 		    <span class="paper-info">{{ .Params.info }}</span>
-		    &nbsp;
+		    <br/>
+		    <a href="{{ .Permalink }}">[abstract]</a>
 		    {{ with .Params.pdf }}
-		    <a style="color: #ff0000;" href="{{ . }}">[pdf]</i></a>
+		    <a style="color: #ff0000;" href="{{ . }}">[pdf]</a>
 		    {{ end }}
 		    {{ with .Params.doi }}
-		    <a href="{{ . }}">[doi]</i></i></a>
+		    <a href="{{ . }}">[doi]</a>
 		    {{ end }}
 	    </li>
         {{ end }}

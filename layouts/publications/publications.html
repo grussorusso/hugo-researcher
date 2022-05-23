@@ -6,8 +6,8 @@
     <ul class="publications">
         {{ range (.Pages.ByParam "year").Reverse }}
 	<li id="{{ .Title | urlize }}">
-		    {{ .Params.authors }}<br/>
 		    <span class="paper-title">{{ .Title }}</span><br/>
+		    <span class="paper-authors">{{ .Params.authors }}</span><br/>
 		    <span class="paper-info">{{ .Params.info }}</span>
 		    <br/>
 		    <a class="paper-links" href="{{ .Permalink }}">[abstract]</a>

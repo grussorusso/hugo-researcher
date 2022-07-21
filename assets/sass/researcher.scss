@@ -13,6 +13,8 @@ $font-family: {{ .Param "style.fontFamily" | default "Inconsolata" }};
 $y-small: 0.6rem;
 $y-medium: 1.0rem;
 
+
+
 // Placeholders
 %link-default {
     color: $red;
@@ -47,6 +49,7 @@ $y-medium: 1.0rem;
     color: $black;
     font-family: $font-family;
     line-height: 1.25;
+    font-size: 1.05rem; /* added by me */
 }
 .container {
     max-width: $max-width;

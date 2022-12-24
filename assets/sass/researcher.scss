@@ -87,6 +87,9 @@ a {
         font-weight: bold;
         margin: $y-medium 0 $y-small 0;
     }
+    h2.homesection {
+	padding-top: 1rem;
+    }
     @for $i from 1 through 4 {
         h#{$i} {
             font-size: 1.1rem + 0.2 * (4 - $i);

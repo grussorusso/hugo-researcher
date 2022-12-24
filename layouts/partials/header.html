@@ -1,13 +1,21 @@
-<div class="container mt-5">
+<div class="container mt-3">
     <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+	    <!--
         <a class="navbar-brand mx-0 mr-sm-auto" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
           {{ with .Site.Params.logo }}
             <img src="{{ . | absURL }}" alt="logo">
           {{ end }}
 	  {{ .Site.Title }}
         </a>
-	<!--<span class="navbar-title mx-0 mr-sm-auto">{{ .Site.Title }}</span>-->
+	    -->
         <div class="navbar-nav flex-row flex-wrap justify-content-center">
+	    <a class="nav-item nav-link" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}"
+		style="padding-left: 0; color: #000; font-weight: bold;"
+		    >
+		    {{ .Site.Title }}
+	    </a>
+           <span class="nav-item navbar-text mx-1 nav-separator">/</span>
+           <span class="nav-item navbar-text mx-1 nav-separator-alt">&nbsp;</span>
             {{ with .Site.Menus.main }}
                 {{ $navbar_len := len . }}
                 {{ range $i, $nav_item := . }}
@@ -16,6 +24,9 @@
                     </a>
                     {{ if ne (add $i 1) $navbar_len }}
                         <span class="nav-item navbar-text mx-1 nav-separator">/</span>
+			<!-- The 'alt' separator is only displayed when the
+				other is hidden -->
+			<span class="nav-item navbar-text mx-1 nav-separator-alt">&nbsp;</span>
                     {{ end }}
                 {{ end }}
             {{ end }}

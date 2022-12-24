@@ -62,9 +62,15 @@ $y-medium: 1.0rem;
 }
 .nav-link {
     @extend %link-default;
+	font-size: 1.1rem;
 }
 .nav-separator {
 	color: #aaaaaa;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+}
+.nav-separator-alt {
+	display: none;
 }
 .navbar-title {
 	font-size: 1.9rem;
@@ -205,9 +211,21 @@ ul.publications {
   .avatar {
 	display: none;
   }
+  .nav-separator {
+	display: none;
+  }
+  .nav-separator-alt {
+	display: inline;
+  }
 }
 @media only screen and (max-width: $avatar-size*4) and (min-width: $avatar-size*2) {
   #content .avatar {
 	float: none;
+  }
+  .nav-separator {
+	display: none;
+  }
+  .nav-separator-alt {
+	display: inline;
   }
 }

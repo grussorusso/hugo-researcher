@@ -10,6 +10,10 @@
 		    <span class="paper-authors">{{ .Params.authors }}</span><br/>
 		    <span class="paper-info">{{ .Params.info }}</span>
 		    <br/>
+		    {{ with .Params.award }}
+		    <span class="paper-award">{{ . }}</span>
+		    <br/>
+		    {{ end }}
 		    <a class="paper-links" href="{{ .Permalink }}">[abstract]</a>
 		    {{ with .Params.pdf }}
 		    <a class="paper-links" style="color: #ff0000;" href="{{ . }}">[pdf]</a>

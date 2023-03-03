@@ -7,6 +7,9 @@
     <p>
     {{ .Params.authors }}
     </p>
+    <p class="paper-info">
+    {{ .Params.info }}
+    </p>
 
     <p>
 		    {{ with .Params.pdf }}
@@ -16,6 +19,9 @@
 		    <a href="{{ . }}">[doi]</i></i></a>
 		    {{ end }}
 		</p>
+    {{ with .Params.award }}
+    <p class="paper-award"> {{ . }} </p>
+    {{ end }}
 
     {{ .Content }}
 </div>

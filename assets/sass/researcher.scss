@@ -4,7 +4,7 @@ $avatar-size: {{ .Param "style.avatarSize" | default "90px;" }};
 
 // Colors
 $black: {{ .Param "style.colorBlack" | default "#222222" }};
-$red: {{ .Param "style.colorRed" | default "#dc3545" }};
+$mainColor: {{ .Param "style.colorMain" | default "#dc3545" }};
 
 // Font
 $font-family: {{ .Param "style.fontFamily" | default "Inconsolata" }};
@@ -18,13 +18,13 @@ $y-medium: 1.0rem;
 
 // Placeholders
 %link-default {
-    color: $red;
+    color: $mainColor;
     text-decoration: none;
     & * {
-        color: $red;
+        color: $mainColor;
     }
     &:hover {
-        color: $red;
+        color: $mainColor;
         text-decoration: underline;
     }
 }
@@ -197,10 +197,6 @@ ul.publications {
 		font-weight: bold;
 	}
 
-	span.paper-info {
-		color: #777;
-		font-style: italic;
-	}
 	span.paper-authors {
 		color: #777;
 	}
@@ -208,6 +204,14 @@ ul.publications {
 	a.paper-links {
 		color: #000;
 	}
+}
+.paper-info {
+	color: #777;
+	font-style: italic;
+}
+.paper-award {
+	color: $mainColor;
+	font-weight: bold;
 }
 
 @media only screen and (max-width: $avatar-size*2) {

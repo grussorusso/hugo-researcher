@@ -1,21 +1,15 @@
 <div class="container mt-3">
-    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-	    <!--
-        <a class="navbar-brand mx-0 mr-sm-auto" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}">
-          {{ with .Site.Params.logo }}
-            <img src="{{ . | absURL }}" alt="logo">
-          {{ end }}
-	  {{ .Site.Title }}
-        </a>
-	    -->
-        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+	<div class="row">
+	<div class="col-md-auto">
 	    <a class="nav-item nav-link" href="{{ .Site.BaseURL }}" title="{{ .Site.Title }}"
 		style="padding-left: 0; color: #000; font-weight: bold;"
 		    >
 		    {{ .Site.Title }}
 	    </a>
-           <span class="nav-item navbar-text mx-1 nav-separator">/</span>
-           <span class="nav-item navbar-text mx-1 nav-separator-alt">&nbsp;</span>
+	</div>
+	<div class="col">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0" style="justify-content: flex-end;">
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
             {{ with .Site.Menus.main }}
                 {{ $navbar_len := len . }}
                 {{ range $i, $nav_item := . }}
@@ -23,7 +17,7 @@
                         {{ $nav_item.Pre }}{{ $nav_item.Name }}{{ $nav_item.Post }}
                     </a>
                     {{ if ne (add $i 1) $navbar_len }}
-                        <span class="nav-item navbar-text mx-1 nav-separator">/</span>
+                        <span class="nav-item navbar-text mx-1 nav-separator">&nbsp;</span>
 			<!-- The 'alt' separator is only displayed when the
 				other is hidden -->
 			<span class="nav-item navbar-text mx-1 nav-separator-alt">&nbsp;</span>
@@ -32,5 +26,8 @@
             {{ end }}
         </div>
     </nav>
+	</div>
+	</div>
 </div>
 <hr>
+

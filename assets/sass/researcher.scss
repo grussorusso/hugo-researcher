@@ -56,24 +56,13 @@ $y-medium: 1.0rem;
 .container {
     max-width: $max-width;
 }
-#nav-container {
-	margin-top: 0.8rem;
-	margin-bottom: 0.8rem;
-}
 .navbar-brand {
     @extend %link-dark;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 .nav-link {
     @extend %link-default;
-}
-.nav-separator {
-	color: #aaaaaa;
-	padding-left: 0.1rem;
-	padding-right: 0.1rem;
-}
-.nav-separator-alt {
-	display: none;
 }
 .navbar-title {
 	font-size: 1.9rem;
@@ -182,6 +171,13 @@ a {
         & > pre {
             padding: 8px 8px;
         }
+    }
+    a {
+	border-bottom: $mainColor 0.1em dotted;
+	&:hover {
+		text-decoration: none;
+		border-bottom: $mainColor 0.1em solid;
+	}
     }
 }
 #footer {

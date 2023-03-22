@@ -60,12 +60,10 @@ $y-medium: 1.0rem;
     @extend %link-dark;
     font-size: 1.3rem;
     font-weight: bold;
+    color: #666;
 }
 .nav-link {
     @extend %link-default;
-}
-.navbar-title {
-	font-size: 1.9rem;
 }
 a {
 	@extend %link-default;
@@ -221,21 +219,9 @@ ul.publications {
   .avatar {
 	display: none;
   }
-  .nav-separator {
-	display: none;
-  }
-  .nav-separator-alt {
-	display: inline;
-  }
 }
 @media only screen and (max-width: $avatar-size*4) and (min-width: $avatar-size*2) {
   #content .avatar {
 	float: none;
-  }
-  .nav-separator {
-	display: none;
-  }
-  .nav-separator-alt {
-	display: inline;
   }
 }

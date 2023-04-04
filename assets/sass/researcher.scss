@@ -56,14 +56,15 @@ $y-medium: 1.0rem;
 .container {
     max-width: $max-width;
 }
-.navbar-brand {
+.custom-brand {
     @extend %link-dark;
     font-size: 1.3rem;
     font-weight: bold;
-    color: #666;
+    color: $black;
 }
-.nav-link {
+.custom-nav-link {
     @extend %link-default;
+    margin: 0.6em;
 }
 a {
 	@extend %link-default;

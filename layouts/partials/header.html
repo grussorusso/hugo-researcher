@@ -1,6 +1,6 @@
-<div class="container mt-2">
-<nav class="navbar navbar-expand-md navbar-default"  style="background-color: #ffffff; padding: 0px;">
-	<a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+<div class="container mt-3">
+<nav class="navbar navbar-expand-md navbar-light"  style="background-color: #ffffff; padding: 0px;">
+	<a class="custom-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,7 +11,7 @@
                 {{ $navbar_len := len . }}
                 {{ range $i, $nav_item := . }}
 			<li class="nav-item">
-				<a class="nav-link" href="{{ $nav_item.URL }}" title="{{ $nav_item.Name }}">
+				<a class="custom-nav-link" href="{{ $nav_item.URL }}" title="{{ $nav_item.Name }}">
 				{{ $nav_item.Pre }}{{ $nav_item.Name }}{{ $nav_item.Post }}
 				</a>
 			</li>
